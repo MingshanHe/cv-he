@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{cv} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+            urlcolor=black}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
+
+\usepackage[normalem]{ulem}
+
+\usepackage{ak_acronyms}
+
+% enable korean?
+\usepackage{ifthen}
+\newboolean{kor}
+\setboolean{kor}{true}
+\newcommand\koronly[1]{\ifthenelse{\boolean{kor}}{#1}}
+
+\linespread{0.75}
+
+\begin{document}
+
+% Address and name
+%------------------------------------------------------
+ \hfill \href{https://mingshanhe.github.io/}{https://mingshanhe.github.io/}\\
+NO.3-11 Wenhua-ro \hfill mshe.research@gmail.com\\
+Heping District \hfill +86 13940130318\\
+Shenyang, P.R.China \hfill \href{https://github.com/MingshanHe}{Github}\\
+
+\hfil{\namesize\bf Mingshan He}\hfil
+
+\input{src/education.tex}
+\input{src/research_exp.tex}
+\input{src/awards.tex}
+\input{src/services.tex}
+
+\input{src/skill.tex}
+\input{src/pubs-recent.tex}
+
+\input{src/interest.tex}
+\input{src/teaching.tex}
+%\input{src/awards.tex}
+
+\bibliographystyle{plain}
+\nobibliography{src/ref}
+
+
+\end{document}
